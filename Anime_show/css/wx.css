@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+
+html,body,#app,.page{
+	width: 100%;
+	height: 100%;
+	font-size:16px;
+}
+
+.page{
+	position: absolute;
+}
+
+img,div,p{
+	position: absolute;
+}
+
+h1{
+	position:absolute;
+	left: 40px;
+	top:50px;
+	color: blue;
+	font-size: 70px;
+	opacity: 60%;
+}
+
+h2{
+	position:absolute;
+	top:150px;
+	width:100%;
+	line-height: 40px;
+	font-size: 50px;
+	text-align:center;
+	color:red ;
+	opacity: 70%;
+}
+
+h3{
+	position:absolute;
+	text-outline: 185px;
+	float:right;
+	top:185px;
+	font-size: 30px;
+	left:60%;
+	color:red;
+	opacity: 60%;
+}
+
+.rotation_screen{
+	transform: rotateZ(90deg);
+}
+/* page模块  样式 */
+.page1{
+	background: url(../img/zhenbai_1.jpg) ;
+	background-size: cover;
+	/* z-index: 9; */
+}
+
+.page2{
+	background:url(../img/chisaki_4.png);
+}
+
+.img_bg{
+	width:100%;
+	height: 100%;
+	opacity: 40%;
+	background-size: cover;
+}
+
+.page4{
+	/* background: pink; */
+}
+
+.page5{
+	/* background: url(../img/bg.gif); */
+}
+
+/* 用于无缝滚动的布局设置 */
+/* #div_chisaki_banner {
+	top:25%;
+	left:10%;
+	width:80%;
+	height:25%;
+	position:relative;
+	/* overflow:hidden; */
+
+div#div_chisaki_banner{
+	/* top:25%; */
+	/* width:80%;
+	height:25%; */
+	width:80%;
+	height:80%;
+	top:15%;
+	left:10%;
+	position: absolute;
+	overflow:hidden;
+}
+
+.ul_banner{
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	position: absolute;
+}
+.li_banner{
+	width:100%;
+	height:100%;
+	list-style:none;
+	float:left;
+	/* margin-top:0px; */
+}
+
+
+
+.chisaki_img{
+	width:100%;
+	position:absolute;
+}
+
+/*居中，参考：https://www.cnblogs.com/echolun/p/11353627.html*/
+/* .ul_banner {
+	position:absolute;
+	} 
+.li_banner {
+	float:left;
+	width:100%;
+	height:100%;
+	list-style:none;
+	font-size:100px;
+	}
+.chisaki_img{
+	opacity: 0;
+} */
+#div_chisaki_banner{
+	animation:chisaki_donghua 3s both  3s ;
+}
+
+.appear_gradually_class{
+	animation: appear_gradually 2s both;
+}
+
+.vanish_gradually_class{
+	animation:vanish_gradually 2s both;
+}
+
+.zhenbai{	
+	top:40%;
+	width:80%;
+	left:80px;
+}
+
+.p3_zhenbai{
+	transform: rotate(80deg) translateX(-1000px);
+	animation: p3_zhenbai_donghua 2s  both  ;
+}
+
+.p4_zhenbai{
+	transform: rotate(100deg) translateX(-1000px);
+	animation: p4_zhenbai_donghua 2s  both  ;
+}
+
+.cry{
+	position: fixed;
+	width:100%;
+	height: 100%;
+	animation: cry_donghua 3s both 3s;
+}
+
+@keyframes p3_zhenbai_donghua{
+	from{
+		transform: rotate(80deg) translateX(-1000px);
+	}
+	to{transform:rotate(20deg) translateX(0px);}
+}
+
+@keyframes p4_zhenbai_donghua{
+	from{
+		transform: rotate(-80deg) translateX(1000px);
+	}
+	to{transform:rotate(-20deg) translateX(0px);
+	top:70%;}
+}
+
+@keyframes cry_donghua{
+	from{
+		opacity: 100%;
+	}
+	to{
+		opacity: 0%;
+	}
+}
+
+@keyframes chisaki_donghua{
+	from{
+		opacity:0%;
+	}
+	to{opacity: 100%;}
+}
+
+@keyframes fadeOut{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+
+@keyframes p1_xk{
+	from{transform: translate(-50rem,-50rem) rotate(-360deg) scale(0.5);}
+	to{transform: translate(0,0) rotate(0) scale(1);}
+}
+
+@keyframes p1_lg{
+	from{transform: translateZ(50rem) scale(0);}
+	to{transform: translateZ(0) scale(1);}
+}
+
+@keyframes p1_fd{
+	from{opacity: 1;}
+	50%{opacity: 0.5;}
+	to{opacity: 1;}
+}
+
+@keyframes p1_xf{
+	from{transform: scale(1);}
+	50%{transform: scale(1.5);}
+	to{transform: scale(1);}
+}
+
+@keyframes p1_qq{
+	from{transform: rotate(90deg) scale(1);}
+	50%{transform: rotate(90deg) scale(1.5);}
+	to{transform: rotate(90deg) scale(1);}
+}
+
+@keyframes leftIn{
+	from{transform: translateX(-60rem);}
+	to{transform: translateX(0);}
+}
+
+@keyframes rightIn{
+	from{transform: translateX(60rem);}
+	to{transform: translateX(0);}
+}
+
+
+
+.hidden{
+	display: none;
+}
+
+#musicBtn{
+	position:fixed;
+	width: 17%;
+	z-index: 99;
+	right: 5%;
+	top:3%;
+}
+
+@keyframes goTop{
+	from{transform: translateY(0);}
+	to{transform: translateY(-100%);}
+}
+
+.top{
+	animation: goTop 0.5s both linear;
+}
+
+@keyframes nextTop{
+	from{transform: translateY(100%);}
+	to{transform: translateY(0);}
+}
+
+.next{
+	animation: nextTop 0.5s both linear;
+}
+
+@keyframes down{
+	from{transform: translateY(0);}
+	to{transform: translateY(100%);}
+}
+
+.down{
+	animation:down 0.5s both linear;
+}
+
+@keyframes prev{
+	from{transform: translateY(-100%);}
+	to{transform: translateY(0);}
+}
+
+.prev{
+	animation: prev 0.5s both linear;
+}
+
+.hidden_wait{/* 刚好cry_donghua可以用 */
+	animation:cry_donghua 3s both linear ;
+}
+
+
+/* 对page3的操作 */
+.yuhi_img{
+	width:100%;
+	height:100%;	
+}
+
+.text_yuhi{
+	font-size:60px;
+	color:chocolate;
+	border-radius: 3rem;
+	background-color: aliceblue;
+	opacity: 0.7;
+	position: absolute;
+	transform: rotateZ(720deg);
+	animation: text_yuhi_donghua 9s both linear 2s;
+}
+
+.div_content_yuhi{
+	/* 设置时依然要按照旋转前的进行设置 */
+	top:45%;
+	height:15%;
+	left:-20%;
+	width:90%;
+	transform: rotateZ(90deg);
+	border-radius: 3rem;
+	background-color: aliceblue;
+	opacity: 80%;
+}
+
+.text_yuhi_normal{/* 不会消失的那种 */
+	top:0;
+	left:0;
+	color:chocolate;
+	font-size:50px;
+	/* opacity: 70%; */
+	/* background-color: aqua; */
+	margin: 20px 20px;
+}
+
+.continue_btn{
+	bottom:0;
+	left:0%;
+	width:100%;
+	font-size:50px;
+	margin:20px 20px ;
+	color : purple;
+	animation: shine 4s linear infinite;
+	/* background-color: #0000FF; */
+}
+
+.cry_gif{
+	right:0;
+	bottom:0;
+	width:20%;
+	height:10%;
+	position: absolute;
+	transform:rotateZ(90deg);
+	animation: appear_gradually 3s both 1s;
+}
+
+@keyframes text_yuhi_donghua{
+	from{
+		top:200%;
+		left:25%;
+	}
+	25%{
+		transform: rotateZ(90deg) ;
+		top:40%;
+		left:-25%;
+	}
+	75%{
+		transform: rotateZ(90deg) ;
+		top:40%;
+		left:-25%;
+	}
+	to{
+		transform:rotateZ(-90deg);
+		top:-600%;
+	}
+}
+
+@keyframes div_content_yuhi_donghua{//最后停了下来
+	from{
+		top:200%;
+		left:25%;
+	}
+	to{
+		transform: rotateZ(90deg) ;
+		top:40%;
+		left:-25%;
+	}
+}
+
+@keyframes shine{
+	from{opacity: 100%;}
+	50%{opacity: 40%;}
+	to{opacity: 100%;}
+}
+
+@keyframes appear_gradually{
+	from {opacity: 0%;}
+	to{opacity: 100%;}
+}
+
+@keyframes vanish_gradually{
+	from {opacity: 100%;}
+	to{opacity: 0%;}
+}
+
+@keyframes appear_opacity{
+	from {opacity: 0%;}
+	to{opacity: 85%;}
+}
+
+.appear_opacity_class{
+	animation: appear_opacity 2s both ;
+}
+#flower_pic{
+	transform: rotateZ(90deg);
+}
+
+#div_love{
+	font-size:60px;
+	transform: rotateZ(90deg);
+	/* background-color: lightcyan; */
+	/* border-radius: 2rem; */
+	width:55%;
+	height:80px;
+	position: absolute;
+	opacity: 100%;
+	animation: love_fly  2s linear infinite ;
+}
+
+#love{
+	color:pink;
+		padding: absolute;
+		margin:auto auto;
+}
+
+@keyframes love_fly{
+	from {
+		top:40%;
+		left:20%;
+	}
+	25%{
+		top:40%;
+		left:0%;
+	}
+	50%{
+		top:20%;
+		left:0%;
+	}
+	75%{
+		top:20%;
+		left:20%;
+	}
+	to{
+		top:40%;
+		left:20%;
+	}
+}
